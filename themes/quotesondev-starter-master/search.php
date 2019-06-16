@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php qod_numbered_pagination(); ?>
+			<?php wp_pagenavi(); ?>
 
 		<?php else : ?>
 

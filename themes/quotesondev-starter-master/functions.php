@@ -101,22 +101,10 @@ function get_random()
 	return get_posts(array('orderby' => 'rand', 'posts_per_page' => 1));
 }
 
-
+//Custom endpoints
 function get_all_posts($data, $post, $context)
 {
-	// return [
-	//     'id'        => $data->data['id'],
-	//     'date'      => $data->data['date'],
-	//     'date_gmt'  => $data->data['date_gmt'],
-	//     'modified'  => $data->data['modified'],
-	//     'title'     => $data->data['title']['rendered'],
-	//     'content'   => $data->data['content']['rendered'],
-	//     'excerpt'   => $data->data['excerpt']['rendered'],
-	//     'category'  => get_the_category_by_ID( $data->data['categories'][0] ),
-	//     'link'      => $data->data['link'],
-
-
-	// ];
+	
 	$_data = $data->data;
 	$category = get_the_category($post->ID);
 	// $cat_id = $category[0]->cat_ID;
@@ -152,6 +140,7 @@ function red_scripts()
 	wp_enqueue_script('red_comments', $script_url, array('jquery'), false, true);
 	wp_localize_script('red_comments', 'red_vars', array(
 		'rest_url' => esc_url_raw(rest_url()),
+		'home_url' =>esc_url(home_url('/')),
 		'wpapi_nonce' => wp_create_nonce('wp_rest'),
 		'post_id' => get_the_ID()
 	));
