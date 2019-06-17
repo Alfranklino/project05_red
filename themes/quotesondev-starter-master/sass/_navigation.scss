@@ -6,6 +6,7 @@
 
 a {
 	color: $color__link;
+	text-decoration: none;
 
 	&:visited {
 		color: $color__link-visited;
@@ -128,5 +129,19 @@ a {
 		float: right;
 		text-align: right;
 		width: 50%;
+	}
+}
+
+
+
+
+
+
+
+.menu{
+	.page_item{
+		margin-right: 20px;
+		padding-right: 20px; 
+		border-right: 1px solid white;
 	}
 }

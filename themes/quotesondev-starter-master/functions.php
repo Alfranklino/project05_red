@@ -146,3 +146,12 @@ function red_scripts()
 	));
 }
 add_action('wp_enqueue_scripts', 'red_scripts');
+
+
+function get_external_css(){
+	wp_enqueue_style('fontawesome','https://use.fontawesome.com/releases/v5.8.2/css/all.css',false);
+}
+add_action('wp_enqueue_scripts', 'get_external_css');
+
+add_theme_support( 'post-thumbnails',array('page')); 
+add_theme_support( 'post-thumbnails',array('post')); 

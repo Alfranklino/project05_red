@@ -56,7 +56,7 @@ $(document).ready(function () {
                 let postAuthor = randPost.title.rendered;
                 // let postCategory = 
                 $get_post_content.html($(postContent).text());
-                $get_post_author.html(postAuthor + ',');
+                $get_post_author.html('-- '+ postAuthor + ' ,');
                 $get_post_cat.html(FormatCategoriesLinks(randPost));
 
 

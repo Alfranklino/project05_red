@@ -1,0 +1,34 @@
+.home {
+  .site-main {
+    display: grid;
+    grid-template-rows: 1fr 70px;
+    justify-content: center;
+
+
+
+    .postContent {
+      font-family: "Exo-light";
+      font-weight: 200;
+    }
+
+    .postAuthor,
+    .postCategories {
+      display: inline;
+    }
+
+    .postCategories a{
+        font-family: 'Exo-italic-normal';
+    }
+
+    .thepost{
+        display:grid;
+        grid-template-rows: 1fr 50px; 
+    }
+
+    .my_btn {
+      width: 150px;
+      justify-self: center;
+      grid-row: 2/3;
+    }
+  }
+}

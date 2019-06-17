@@ -1,0 +1,17 @@
+.error404{
+    
+    .search-field{
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+    .search-submit{
+        display: inline;
+        border: none;
+        font-size: 1.2rem;
+
+        &:hover{
+            color: $color__link-hover;
+            background-color: $color__background-body;
+        }
+    }
+}

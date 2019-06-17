@@ -8,6 +8,11 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
+
+	<section class="quote-left">
+		<i class="fas fa-quote-left"></i>
+	</section>
+
 	<main id="main" class="site-main" role="main">
 
 
@@ -35,6 +40,10 @@ get_header(); ?>
 			<!-- End tags -->
 		</section>
 	</main><!-- #main -->
+
+	<section class="quote-right">
+		<i class="fas fa-quote-right"></i>
+	</section>
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

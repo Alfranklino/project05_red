@@ -9,22 +9,32 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php echo esc_html( 'Oops! That page can&rsquo;t be found.' ); ?></h1>
-				</header><!-- .page-header -->
+	<section class="quote-left">
+		<i class="fas fa-quote-left"></i>
+	</section>
 
-				<div class="page-content">
-					<p><?php echo esc_html( 'It looks like nothing was found at this location. Maybe try a search?' ); ?></p>
 
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+	<main id="main" class="site-main" role="main">
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		<section class="error-404 not-found">
+			<header class="page-header">
+				<h1 class="page-title"><?php echo esc_html('Oops!'); ?></h1>
+			</header><!-- .page-header -->
+
+			<div class="page-content">
+				<p><?php echo esc_html('It looks like nothing was found at this location. Maybe try a search?'); ?></p>
+
+				<?php get_search_form(); ?>
+			</div><!-- .page-content -->
+		</section><!-- .error-404 -->
+
+	</main><!-- #main -->
+
+	<section class="quote-right">
+		<i class="fas fa-quote-right"></i>
+	</section>
+</div><!-- #primary -->
 
 <?php get_footer(); ?>

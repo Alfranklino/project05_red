@@ -27,14 +27,7 @@
 				<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 
 			</div><!-- .site-branding -->
-			<?php
-			// $imgID = 230;
-			// $imageSize = "thumbnail";
-			$img = get_template_directory_uri() . '/images/qod-logo.svg';
-
-			?>
-			<a href="<?php echo esc_url(home_url('/')); ?>" class="link-logo"><img src="<?php echo ($img) ?>" alt="Logo quotes on dev"></a>
-
+			<section><a href="<?php echo esc_url(home_url('/')); ?>">quotes on dev_</a></section>
 			<section><a href="test_404.php">404_</a></section>
 
 		</header><!-- #masthead -->

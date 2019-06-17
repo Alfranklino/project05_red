@@ -8,7 +8,14 @@
 get_header(); ?>
 
 <div id="primary" class="content-area">
+
+	<section class="quote-left">
+		<i class="fas fa-quote-left"></i>
+	</section>
+
+
 	<main id="main" class="site-main" role="main">
+		<h2>Submit a Quote</h2>
 		<?php if (current_user_can('administrator')) : ?>
 			<form name="post-form" class="post-form">
 				<label for="author">Author of Quote</label>
@@ -26,11 +33,17 @@ get_header(); ?>
 				<input type="submit" name="submit" value="Submit" class="submitPostBtn">
 			</form>
 		<?php else :
-		echo ("<p>Choose your room!</p>");
-		
+		echo ("<p>Sorry, you must be logged in to submit a quote!</p> <p><a href=");
+		echo esc_url( wp_login_url() ); 
+		echo(">Click here to login.</a></p>");
+
 	endif ?>
 
 	</main><!-- #main -->
+
+	<section class="quote-right">
+		<i class="fas fa-quote-right"></i>
+	</section>
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

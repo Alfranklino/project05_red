@@ -16,7 +16,11 @@
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html('Primary Menu'); ?></button>
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 		</nav><!-- #site-navigation -->
-		<span>Brought to you by</span><span> <a href="<?php echo esc_url('www.linkedin.com/in/albert-franklin-mamvoula-nguiamba-a11202106/'); ?> class='link_brought'">Alfranklino</a></span>
+
+		<section class="broughtToYou">
+			<span>Brought to you by</span><span> <a href="<?php echo esc_url('www.linkedin.com/in/albert-franklin-mamvoula-nguiamba-a11202106/'); ?> class='link_brought'">Alfranklino</a></span>
+		</section>
+
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
