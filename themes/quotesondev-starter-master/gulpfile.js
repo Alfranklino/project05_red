@@ -1,5 +1,5 @@
 const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync');
+// const browserSync = require('browser-sync');
 const cssnano = require('gulp-cssnano');
 const eslint = require('gulp-eslint');
 const gulp = require('gulp');
@@ -55,24 +55,25 @@ gulp.task(
 
 // Set-up BrowserSync and watch
 
-gulp.task('browser-sync', function() {
-  const files = [
-    './build/css/*.css',
-    './build/js/*.js',
-    './*.php',
-    './**/*.php'
-  ];
+// gulp.task('browser-sync', function() {
+//   const files = [
+//     './build/css/*.css',
+//     './build/js/*.js',
+//     './*.php',
+//     './**/*.php'
+//   ];
 
-  browserSync.init(files, {
-    proxy: 'http://localhost:8080/red_prj_05/'
-  });
+//   browserSync.init(files, {
+//     proxy: 'http://localhost:8080/red_prj_05/'
+//   });
 
-  gulp.watch(files).on('change', browserSync.reload);
-});
+//   gulp.watch(files).on('change', browserSync.reload);
+// });
 
 gulp.task('watch', function() {
   gulp.watch('js/*.js', gulp.series('scripts'));
   gulp.watch('sass/*.scss', gulp.series('sass'));
 });
 
-gulp.task('default', gulp.parallel('browser-sync', 'watch'));
+// gulp.task('default', gulp.parallel('browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('watch'));

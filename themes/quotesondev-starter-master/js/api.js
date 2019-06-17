@@ -27,12 +27,7 @@ $(document).ready(function () {
         URL_TAGS: 'tags'
     };
 
-    const typeCurrentUrl = {
-        IS_URL_ALL_POSTS: 1,
-        IS_URL_CATEGORIES: 2,
-        IS_URL_TAGS: 3
-    }
-    let curUrl;
+ 
 
 
     (function () {
@@ -49,19 +44,17 @@ $(document).ready(function () {
             })
 
             function FormatPost(posts) {
-                //Select one random post
-                // GetARandomPost(posts);
+             
                 let randPost = GetARandomPost(posts);
                 let postContent = randPost.content.rendered;
                 let postAuthor = randPost.title.rendered;
-                // let postCategory = 
+             
                 $get_post_content.html($(postContent).text());
                 $get_post_author.html('-- '+ postAuthor + ' ,');
                 $get_post_cat.html(FormatCategoriesLinks(randPost));
 
 
-                // console.log(randPost);
-                // $get_post_content.html(postContent);
+             
 
 
             };
@@ -83,12 +76,7 @@ $(document).ready(function () {
             }
 
             function GetARandomPost(posts) {
-                // Convert as array if needed
-                // for i as array index to the length of that array;
-                // get a random i
-                // select that index i from the array of posts
-                // return that post
-                // console.log(posts);
+          
                 var randIndex = randomIntFromInterval(0, posts.length - 1);
                 return posts[randIndex];
             }
@@ -111,12 +99,12 @@ $(document).ready(function () {
             $get_form.on('submit', function (event) {
                 console.log('Test');
 
-                // console.log(FormatPostToSend());
+            
                 event.preventDefault();
                 $.ajax({
                     method: 'POST',
                     url: red_vars.rest_url + 'wp/v2/posts',
-                    // dataType: 'json',
+                
                     data: FormatPostToSend(),
                     beforeSend: function (xhr) {
                         xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
@@ -124,10 +112,7 @@ $(document).ready(function () {
                     },
 
                     success: function (response) {
-                        // console.log(red_vars);
-                        // console.log(response);
-                        // console.log(FormatPost(response));
-                        // FormatPostToSend(response);
+                        
                         console.log(response);
                         console.log(JSON.stringify(response));
                     },
@@ -142,16 +127,13 @@ $(document).ready(function () {
                     .done(function (response) {
                         $get_title_quote.val('');
                         $get_content_quote.val('');
-                        // console.log('test');
+                       
                     })
                     .fail(function (code, status) {
-                        // what you want to happen if the ajax request fails (404 error, timeout, etc.)
-                        // 'code' is the numeric code, and 'status' is the text explanation for the error
-                        // I usually just output some fancy error messages
+                      
                     })
                     .always(function (xhr, status) {
-                        // what you want to have happen no matter if the response is success or error
-                        // here, you would "stop" your loading animations, and maybe output a footer at the end of your content, reading "done"
+                  
                     });
 
             })
@@ -190,10 +172,7 @@ $(document).ready(function () {
                 }
             })
                 .done(function (response) {
-                    // console.log(red_vars);
-                    // console.log(response);
-                    // console.log(FormatPost(response));
-                    // ajaxResponse = response;
+            
 
                     ajResponse = response;
                     // console.log(ajResponse);
@@ -243,19 +222,19 @@ $(document).ready(function () {
 
 
         function FormatArchivesTags(url) {
-            // curUrl = typeCurrentUrl.IS_URL_TAGS;
+           
             CallAjax(url);
 
         }
 
         function FormatArchivesAuthors(url) {
-            // curUrl = typeCurrentUrl.IS_URL_ALL_POSTS;
+            
             CallAjax(url);
 
         }
 
         function FormatArchivesCat(url) {
-            // curUrl = typeCurrentUrl.IS_URL_CATEGORIES;
+            
             CallAjax(url);
 
         }
