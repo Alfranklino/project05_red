@@ -35,8 +35,6 @@
 			?>
 			<a href="<?php echo esc_url(home_url('/')); ?>" class="link-logo"><img src="<?php echo ($img) ?>" alt="Logo quotes on dev"></a>
 
-			<section><a href="test_404.php">404_</a></section>
-
 		</header><!-- #masthead -->
 
 		<div id="content" class="site-content">
