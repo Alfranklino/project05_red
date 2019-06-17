@@ -1,11 +1,19 @@
 .site-header {
   display: grid;
   justify-content: center;
-//   position: absolute;
-//   top: 10px;
-//   right: 25%;
 
   .link-logo {
     justify-self: center;
+  }
+}
+
+@media (max-width: 783px) {
+  .site-header {
+    display: grid;
+    justify-content: left;
+
+    .link-logo {
+      justify-self: left;
+    }
   }
 }

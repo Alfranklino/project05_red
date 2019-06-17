@@ -22,3 +22,4 @@
 		?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
+<p>&#x1F642;</p> 

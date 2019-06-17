@@ -9,8 +9,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<section class="quote-left">
-	<i class="fas fa-quote-left"></i>
+		<i class="fas fa-quote-left"></i>
 	</section>
+
 	<main id="main" class="site-main" role="main">
 
 		<section class="thePost">
@@ -20,8 +21,9 @@ get_header(); ?>
 		</section>
 		<button class="my_btn">Show Me Another!</button>
 	</main><!-- #main -->
+
 	<section class="quote-right">
-	<i class="fas fa-quote-right"></i>
+		<i class="fas fa-quote-right"></i>
 	</section>
 </div><!-- #primary -->
 

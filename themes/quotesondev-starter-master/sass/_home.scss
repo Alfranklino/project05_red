@@ -4,8 +4,6 @@
     grid-template-rows: 1fr 70px;
     justify-content: center;
 
-
-
     .postContent {
       font-family: "Exo-light";
       font-weight: 200;
@@ -16,19 +14,31 @@
       display: inline;
     }
 
-    .postCategories a{
-        font-family: 'Exo-italic-normal';
+    .postCategories a {
+      font-family: "Exo-italic-normal";
     }
 
-    .thepost{
-        display:grid;
-        grid-template-rows: 1fr 50px; 
+    .thepost {
+      display: grid;
+      grid-template-rows: 1fr 50px;
     }
 
     .my_btn {
       width: 150px;
       justify-self: center;
       grid-row: 2/3;
+    }
+  }
+
+  @media (max-width: 783px) {
+    .site-main {
+      display: grid;
+      grid-template-rows: 1fr 70px;
+      justify-content: left;
+
+      .my_btn {
+        justify-self: left;
+      }
     }
   }
 }

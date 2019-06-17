@@ -7,7 +7,7 @@
 /* Submit a Quote Page */
 .hfeed {
   position: relative;
-  width: 1080px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2%;
@@ -33,6 +33,34 @@
         font-size: 5rem;
         color: $color__link;
         justify-self: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 783px) {
+  .hfeed {
+    position: relative;
+    width: 95%;
+    
+    margin-top: 2%;
+
+    
+
+    .site-content {
+      // margin-top: 200px;
+
+      .content-area {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .quote-left {
+          display: none;
+        }
+
+        .quote-right {
+          display: none;
+        }
       }
     }
   }
